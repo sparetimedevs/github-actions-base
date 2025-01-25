@@ -1,4 +1,4 @@
-name: Reusable Gradle with X virtual framebuffer (Xvfb) CI Pipeline
+name: Reusable Gradle with fluidsynth CI Pipeline
 
 on:
   workflow_call:
@@ -21,11 +21,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4.2.1
-      - name: Set up xvfb for screen 0
-        run: Xvfb :1 -screen 0 1600x1200x24 &
+      - name: Install fluidsynth
+        run: sudo apt-get install fluidsynth
       - name: Run build with Gradle Wrapper
         run: ./gradlew clean build
-        env:
-          DISPLAY: :1
-      - name: Tear down xvfb
-        run: killall Xvfb
