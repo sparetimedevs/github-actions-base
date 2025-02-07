@@ -20,7 +20,7 @@ jobs:
       - name: Checkout project sources
         uses: actions/checkout@v4
       - name: Set up Gradle
-        uses: gradle/actions/setup-gradle@v4.2.1
+        uses: gradle/actions/setup-gradle@v4.3.0
       - name: Install fluidsynth
         run: sudo apt-get install fluidsynth
       - name: Check fluidsynth command
