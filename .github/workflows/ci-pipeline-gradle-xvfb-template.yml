@@ -20,7 +20,7 @@ jobs:
       - name: Checkout project sources
         uses: actions/checkout@v4
       - name: Set up Gradle
-        uses: gradle/actions/setup-gradle@v4.3.0
+        uses: gradle/actions/setup-gradle@v4.4.0
       - name: Set up xvfb for screen 0
         run: Xvfb :1 -screen 0 1600x1200x24 &
       - name: Run build with Gradle Wrapper
