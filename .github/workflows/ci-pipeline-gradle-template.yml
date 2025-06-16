@@ -20,6 +20,6 @@ jobs:
       - name: Checkout project sources
         uses: actions/checkout@v4
       - name: Set up Gradle
-        uses: gradle/actions/setup-gradle@v4.3.0
+        uses: gradle/actions/setup-gradle@v4.4.1
       - name: Run build with Gradle Wrapper
         run: ./gradlew clean build
