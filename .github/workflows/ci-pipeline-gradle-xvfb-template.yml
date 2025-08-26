@@ -18,7 +18,7 @@ jobs:
           distribution: 'temurin'
           architecture: x64
       - name: Checkout project sources
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4.3.0
       - name: Set up xvfb for screen 0
